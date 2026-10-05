@@ -1,7 +1,7 @@
 # Archival verification: proposed changes to DATA
 
 Run 2026-10-05. 41 low-confidence persons (deceased or born before ~1926). Detail and sources: `findings_*.json`.
-Nothing below is applied to `index.html` yet; each row needs owner approval.
+**Applied 2026-10-05:** all rows marked certain/probable in sections A and D (owner approval). Section B rows and "possible" matches remain open.
 
 **Coverage caveat.** The cloud environment's network policy blocked pamyat-naroda.ru, obd-memorial.ru, podvignaroda.ru, bessmertnybarak.ru, nlr.ru/visz.nlr.ru, familysearch.org, forum.vgd.ru, kremnik.ru and others. "Nothing found" below means "not found in reachable sources", not "no record exists".
 
