@@ -51,3 +51,13 @@ Discrepancies of 1–4 days in birth dates: officer files vs family data; keep b
 
 ## Not searched (possibly living, masked on the page)
 P012, P013, P094, P095, P148, P231–P233.
+
+## E. Manual checks by the owner, 2026-10-05 (pamyat-naroda.ru)
+
+| Query | Result | Action |
+|---|---|---|
+| Балковский Константин, 1912 | 5 documents: lists 1941, loss register and report 26.04.1944, ЦАМО card 1982. Wife Смирнова Варвара Ивановна, daughter Валентина Константиновна, address Выборгская наб. 35 кв. 14 | Applied: P240, P148, F44 → high; P146 death place |
+| ОБД id 70009160642 (opened by owner) | Учетно-послужная картотека офицерского состава: Морозов Григорий Иванович, b. 22.11.1915, Мордовская АССР, Козловский р-н, с. Керамсурка; призван 27.09.1937; ст. лейтенант; выбыл 01.02.1964; ЦАМО шкаф 659 ящик 858 | Not added to tree: parentage unproven. Patronymic, year and village fit P040 × P041 (married 1910). Awaiting relatives. Next step: request the personal file from ЦАМО (шкаф 659, ящик 858), which lists parents |
+| Морозов Григорий Иванович, 1915 | Two namesakes, neither from Керамсурка: (1) b. Молдавия, Дубоссарский р-н, Орден Отечественной войны I ст. 1985; (2) b. Орловская обл., с. Сабурово, гв. сержант 26 гв. пабр, Орден Красной Звезды 30.04.1944 | Rejected. The Керамсурка record (OBD id 70009160642) remains the only lead; question to relatives stands |
+| Глод-Сачук | Nothing found on pamyat-naroda | None |
+| «Глод», «Глод-Сачук» in Блокада. Книга памяти (visz.nlr.ru) | Nothing found | Remaining: Ленинградский мартиролог, Пискарёвское кладбище lists, ЦГА СПб death records |

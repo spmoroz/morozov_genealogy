@@ -11,6 +11,7 @@ body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-ser
 header{background:var(--accent);color:#fdf8ef;padding:14px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 header h1{font-size:18px;margin:0;font-weight:600}
 header .stat{font-size:12px;opacity:.85}
+.hbtns{display:flex;gap:8px}
 #search{margin-left:auto;padding:7px 12px;border:none;border-radius:6px;min-width:220px;font-size:14px}
 .wrap{display:grid;grid-template-columns:300px 1fr;gap:0;height:calc(100vh - 52px)}
 #list{overflow:auto;border-right:1px solid var(--line);background:#efe9dc}
@@ -19,7 +20,7 @@ header .stat{font-size:12px;opacity:.85}
 .pitem:hover{background:#e3dccb}
 .pitem .yr{color:var(--mut);font-size:12px}
 #main{overflow:auto;padding:22px 26px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;max-width:760px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;max-width:880px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
 .card h2{margin:0 0 2px;font-size:24px}
 .maiden{color:var(--mut);font-weight:400;font-size:16px}
 .badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;color:#fff;vertical-align:middle;margin-left:8px}
@@ -47,6 +48,42 @@ header .stat{font-size:12px;opacity:.85}
 .copy{background:#555;color:#fff;border:none;border-radius:6px;padding:8px 14px;cursor:pointer}
 .legend{font-size:12px;color:var(--mut);margin-top:10px}
 
+.hbtn{background:rgba(255,255,255,.16);color:#fdf8ef;border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:6px 10px;cursor:pointer;font-size:13px}
+.hbtn:hover{background:rgba(255,255,255,.28)}
+#count{padding:8px 14px;font-size:12px;color:var(--mut);border-bottom:1px solid #e3dccb}
+.pitem .hit{display:block;font-size:11px;color:var(--mut);margin-top:2px}
+.pitem.first{background:#e3dccb}
+mark{background:#f3dfa2;color:inherit;padding:0 1px;border-radius:2px}
+.treewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:6px;padding-bottom:4px}
+.treewrap svg{display:block}
+.tree path{fill:none;stroke:var(--line);stroke-width:1.5}
+.tree .node{cursor:pointer}
+.tree .node rect.bx{fill:#faf6ee;stroke:var(--line);stroke-width:1}
+.tree .node:hover rect.bx,.tree .node:focus rect.bx{fill:#efe9dc;stroke:var(--accent)}
+.tree .node.root rect.bx{fill:#f3e7d8;stroke:var(--accent);stroke-width:1.5}
+.tree .node text{font-size:12px;fill:var(--ink)}
+.tree .node text.y{font-size:11px;fill:var(--mut)}
+.tree .s-high{fill:var(--hi)}.tree .s-medium{fill:var(--med)}.tree .s-low{fill:var(--lo)}
+#book{display:none}
+#book h1{font-size:22px;margin:0 0 4px}
+#book h2{font-size:16px;margin:22px 0 8px;padding-bottom:4px;border-bottom:1px solid #999;break-after:avoid}
+#book .bp{margin:0 0 9px;font-size:11.5px;line-height:1.4;break-inside:avoid}
+#book .bp b{font-size:12.5px}
+#book .bm{color:#555}
+@media print{
+  @page{margin:14mm}
+  body{background:#fff}
+  header,#list,.backbtn,.editbtn,#editbox{display:none!important}
+  .wrap{display:block;height:auto}
+  #main{display:block!important;overflow:visible;padding:0}
+  .card{box-shadow:none;border:none;max-width:none;padding:0}
+  .chip{border:none;background:none;padding:0 8px 0 0;margin:0}
+  .treewrap{overflow:visible}
+  .treewrap svg{max-width:100%;height:auto}
+  .tree .node rect.bx{fill:#fff}
+  body.printbook .wrap{display:none}
+  body.printbook #book{display:block}
+}
 .backbtn{display:none;margin-bottom:10px;background:#efe9dc;border:1px solid var(--line);border-radius:6px;padding:9px 14px;cursor:pointer;font-size:14px}
 @media (max-width:760px){
   .wrap{grid-template-columns:1fr;height:auto;min-height:calc(100vh - 60px)}
@@ -55,6 +92,7 @@ header .stat{font-size:12px;opacity:.85}
   header{padding:10px 14px}
   header h1{font-size:16px}
   #search{margin-left:0;width:100%;min-width:0;font-size:16px}
+  .hbtns{width:100%}
   body.detail #list{display:none}
   body:not(.detail) #main{display:none}
   .backbtn{display:inline-block}
@@ -73,12 +111,14 @@ header .stat{font-size:12px;opacity:.85}
 <header>
   <h1>🌳 Родословная Морозовых</h1><span class="stat">· публичная версия (данные живущих родственников скрыты)</span>
   <span class="stat" id="stat"></span>
-  <input id="search" placeholder="Поиск по имени…" autocomplete="off">
+  <input id="search" placeholder="Поиск: имя, село, год…" autocomplete="off" title="Ищет по имени, датам, местам, линии и заметкам. Несколько слов: все должны совпасть. Enter: открыть первый результат">
+  <span class="hbtns"><button class="hbtn" onclick="printCard()" title="Распечатать открытую карточку с деревом">🖨 Карточка</button><button class="hbtn" onclick="printBook()" title="Распечатать всё родословие одним документом">📖 Вся книга</button></span>
 </header>
 <div class="wrap">
-  <div id="list"></div>
+  <div id="list"><div id="count"></div><div id="items"></div></div>
   <div id="main"></div>
 </div>
+<div id="book"></div>
 <script>
 const DATA = {
  "persons": [
@@ -2104,26 +2144,95 @@ F.forEach(f=>{
   (f.children_ids||"").split(";").map(x=>x.trim()).filter(Boolean).forEach(c=>{(fams_as_child[c]=fams_as_child[c]||[]).push(f);});
 });
 const childrenOf=fid=>(F.find(f=>f.fam_id===fid).children_ids||"").split(";").map(x=>x.trim()).filter(Boolean);
-function years(p){const b=(p.birth_date||"").slice(0,4),d=(p.death_date||"").slice(0,4);if(!b&&!d)return"";return"("+(b||"?")+(d?"–"+d:"")+")";}
+function yr(v){const m=(v||"").match(/\d{4}/);return m?((/^до\s/.test(v)?"до ":"")+m[0]):"";}
+function years(p){const b=yr(p.birth_date),d=yr(p.death_date);if(!b&&!d)return"";return"("+(b||"?")+(d?"–"+d:"")+")";}
 function fullName(p){return p.name+(p.maiden_name?" ("+p.maiden_name+")":"");}
 
 document.getElementById('stat').textContent = DATA.persons.length+" персон · "+F.length+" семей · 8 линий";
 
+const norm=x=>(x||"").toLowerCase().replace(/ё/g,"е");
+const FIELDS=[["name",""],["maiden_name","фамилия"],["birth_date","рожд."],["birth_place","рожд."],["death_date","смерть"],["death_place","смерть"],["line","линия"],["notes","заметка"],["source","источник"],["id","ID"]];
+function esc(t){return String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function markTerms(t,terms){let h=esc(t);terms.forEach(w=>{if(!w)return;const re=new RegExp("("+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&").replace(/е/g,"[её]")+")","gi");h=h.replace(re,"<mark>$1</mark>");});return h;}
+function matchInfo(p,terms){
+  const hay=FIELDS.map(([k])=>norm(p[k])).join(" | ");
+  if(!terms.every(w=>hay.includes(w)))return null;
+  const nameHit=terms.every(w=>norm(fullName(p)).includes(w));
+  if(nameHit||!terms.length)return {hint:""};
+  for(const [k,lab] of FIELDS){const v=p[k]||"";const n=norm(v);const w=terms.find(t=>n.includes(t));
+    if(w&&k!=="name"){const i=Math.max(0,n.indexOf(w)-30);return {hint:(lab?lab+": ":"")+(i?"…":"")+v.slice(i,i+80)+(v.length>i+80?"…":"")};}}
+  return {hint:""};
+}
+let firstHit=null;
 function renderList(filter=""){
-  const byLine={};
-  DATA.persons.filter(p=>fullName(p).toLowerCase().includes(filter.toLowerCase()))
-    .forEach(p=>{(byLine[p.line]=byLine[p.line]||[]).push(p);});
+  const terms=norm(filter).split(/\s+/).filter(Boolean);
+  const byLine={};let n=0;
+  DATA.persons.forEach(p=>{const m=matchInfo(p,terms);if(m){n++;(byLine[p.line]=byLine[p.line]||[]).push([p,m]);}});
   const order=["Морозов","Костин","Прохоров","Миронов","Чуваков","Ефремов","Ушаков","Фомичев","Широнин","Балковский","Рогов","Михайлов","Глод-Сачук","боковая"];
   const keys=Object.keys(byLine).sort((a,b)=>(order.indexOf(a)+99*(order.indexOf(a)<0))-(order.indexOf(b)+99*(order.indexOf(b)<0)));
-  let h="";
+  let h="";firstHit=null;
   keys.forEach(k=>{
-    h+=`<div class="lineGrp">${k}</div>`;
-    byLine[k].sort((a,b)=>(a.birth_date||"9").localeCompare(b.birth_date||"9")).forEach(p=>{
-      h+=`<div class="pitem" onclick="show('${p.id}')">${p.name} <span class="yr">${years(p)}</span></div>`;
+    h+=`<div class="lineGrp">${esc(k)}</div>`;
+    byLine[k].sort((a,b)=>(a[0].birth_date||"9").localeCompare(b[0].birth_date||"9")).forEach(([p,m])=>{
+      if(!firstHit)firstHit=p.id;
+      h+=`<div class="pitem${terms.length&&firstHit===p.id?" first":""}" onclick="show('${p.id}')">${markTerms(p.name,terms)} <span class="yr">${years(p)}</span>${m.hint?`<span class="hit">${markTerms(m.hint,terms)}</span>`:""}</div>`;
     });
   });
-  document.getElementById('list').innerHTML=h;
+  document.getElementById('count').textContent=terms.length?(n?"Найдено: "+n+(n>1?" · Enter открывает первого":""):"Ничего не найдено"):"Всего: "+DATA.persons.length;
+  document.getElementById('items').innerHTML=h||'<div class="pitem" style="cursor:default;color:#999">Попробуйте часть имени, село или год</div>';
 }
+
+// ---------- graphical tree ----------
+const BW=176,BH=44,GX=204,VG=10;
+function cut(t,n){return t.length>n?t.slice(0,n-1)+"…":t;}
+function node(id,x,y,root){const p=P[id];return `<g class="node${root?" root":""}" tabindex="0" onclick="show('${id}')" onkeydown="if(event.key==='Enter')show('${id}')"><title>${esc(fullName(p))} ${years(p)}</title><rect class="bx" x="${x}" y="${y}" width="${BW}" height="${BH}" rx="6"/><rect class="s-${p.confidence}" x="${x}" y="${y+6}" width="3" height="${BH-12}" rx="1.5"/><text x="${x+11}" y="${y+19}">${esc(cut(p.name,25))}</text><text class="y" x="${x+11}" y="${y+35}">${esc(years(p)||" ")}</text></g>`;}
+function svgWrap(w,h,body,label){return `<svg class="tree" role="img" aria-label="${label}" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">${body}</svg>`;}
+function ancestorsSVG(id,G){
+  let depth=0;(function d(pid,g){if(g>depth)depth=g;const f=(fams_as_child[pid]||[])[0];if(!f||g>=G)return;[f.husband_id,f.wife_id].forEach(x=>x&&d(x,g+1));})(id,0);
+  if(!depth)return "";
+  const H=Math.max(2**depth*(BH+VG),BH+VG);let nodes="",lines="";
+  (function rec(pid,g,i){const span=H/2**g,y=i*span+span/2,x=g*GX;nodes+=node(pid,x,y-BH/2,g===0);
+    const f=(fams_as_child[pid]||[])[0];if(!f||g>=depth)return;
+    [f.husband_id,f.wife_id].forEach((par,k)=>{if(!par)return;const ci=i*2+k,cs=H/2**(g+1),cy=ci*cs+cs/2;
+      lines+=`<path d="M${x+BW} ${y}H${x+BW+(GX-BW)/2}V${cy}H${(g+1)*GX}"/>`;rec(par,g+1,ci);});
+  })(id,0,0);
+  return svgWrap(depth*GX+BW+2,H,lines+nodes,"Предки");
+}
+function kidsOf(pid){return (fams_as_spouse[pid]||[]).flatMap(f=>childrenOf(f.fam_id));}
+function descendantsSVG(id,G){
+  if(!kidsOf(id).length)return "";
+  let row=0,nodes="",lines="",depth=0;
+  (function lay(pid,g){if(g>depth)depth=g;const ks=g<G?kidsOf(pid):[];let y;
+    if(!ks.length){y=row++*(BH+VG)+BH/2;}
+    else{const ys=ks.map(k=>lay(k,g+1));y=(ys[0]+ys[ys.length-1])/2;
+      ys.forEach(cy=>{lines+=`<path d="M${g*GX+BW} ${y}H${g*GX+BW+(GX-BW)/2}V${cy}H${(g+1)*GX}"/>`;});}
+    nodes+=node(pid,g*GX,y-BH/2,g===0);return y;
+  })(id,0);
+  return svgWrap(depth*GX+BW+2,row*(BH+VG),lines+nodes,"Потомки");
+}
+
+// ---------- print ----------
+function printCard(){document.body.classList.remove('printbook');window.print();}
+function printBook(){
+  const order=["Морозов","Костин","Прохоров","Миронов","Чуваков","Ефремов","Ушаков","Фомичев","Широнин","Балковский","Рогов","Михайлов","Глод-Сачук","боковая"];
+  const byLine={};DATA.persons.forEach(p=>(byLine[p.line]=byLine[p.line]||[]).push(p));
+  const keys=Object.keys(byLine).sort((a,b)=>(order.indexOf(a)+99*(order.indexOf(a)<0))-(order.indexOf(b)+99*(order.indexOf(b)<0)));
+  const names=a=>a.map(x=>esc(P[x].name)).join(", ");
+  let h=`<h1>Родословная Морозовых</h1><div class="bm">${esc(document.getElementById('stat').textContent)} · напечатано ${new Date().toLocaleDateString("ru-RU")}</div>`;
+  keys.forEach(k=>{h+=`<h2>Линия: ${esc(k)}</h2>`;
+    byLine[k].sort((a,b)=>(a.birth_date||"9").localeCompare(b.birth_date||"9")).forEach(p=>{
+      const par=(fams_as_child[p.id]||[]).flatMap(f=>[f.husband_id,f.wife_id]).filter(Boolean);
+      const sp=(fams_as_spouse[p.id]||[]).map(f=>f.husband_id===p.id?f.wife_id:f.husband_id).filter(Boolean);
+      const kids=kidsOf(p.id);
+      const ev=[[p.birth_date,p.birth_place].filter(Boolean).join(", "),[p.death_date,p.death_place].filter(Boolean).join(", ")];
+      h+=`<div class="bp"><b>${esc(fullName(p))}</b> ${years(p)} <span class="bm">[${p.id}]</span><br>`
+        +(ev[0]?`Рожд.: ${esc(ev[0])}. `:"")+(ev[1]?`Смерть: ${esc(ev[1])}. `:"")
+        +(par.length?`Родители: ${names(par)}. `:"")+(sp.length?`Супруг(а): ${names(sp)}. `:"")+(kids.length?`Дети: ${names(kids)}. `:"")
+        +(p.notes?`<br><span class="bm">${esc(p.notes)}</span>`:"")+`</div>`;});});
+  document.getElementById('book').innerHTML=h;
+  document.body.classList.add('printbook');window.print();
+}
+window.addEventListener('afterprint',()=>document.body.classList.remove('printbook'));
 
 function pedigree(id,depth){
   if(depth<=0||!fams_as_child[id])return"";
@@ -2159,7 +2268,9 @@ function show(id){
   h+=`<h3>Братья / сёстры</h3>${chips(sibs)}`;
   h+=`</div>`;
   if(p.notes)h+=`<div class="note">${p.notes}</div>`;
-  if(fams_as_child[id]){h+=`<div class="rel"><h3>Предки</h3><div class="ped">${pedigree(id,4)}</div></div>`;}
+  const anc=ancestorsSVG(id,3),desc=descendantsSVG(id,3);
+  if(anc)h+=`<div class="rel"><h3>Предки</h3><div class="treewrap">${anc}</div></div>`;
+  if(desc)h+=`<div class="rel"><h3>Потомки</h3><div class="treewrap">${desc}</div></div>`;
   h+=`<button class="editbtn" onclick="toggleEdit('${id}')">✏️ Предложить правку / комментарий</button>`;
   h+=`<div id="editbox">
         <div class="legend" style="margin-bottom:8px">Дополнить или поправить информацию об этом человеке. Ответ сохранится в базе Сергея (Google-таблица).</div>
@@ -2188,6 +2299,7 @@ function openForm(id){
 }
 
 document.getElementById('search').addEventListener('input',e=>renderList(e.target.value));
+document.getElementById('search').addEventListener('keydown',e=>{if(e.key==='Enter'&&firstHit)show(firstHit);});
 renderList();
 show('P001');
 document.body.classList.remove('detail');
