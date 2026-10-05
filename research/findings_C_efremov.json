@@ -1,0 +1,450 @@
+[
+ {
+  "id": "P105",
+  "name": "Никифор Ефремов",
+  "status": "nothing_found",
+  "sources_tried": [
+   {
+    "source": "Exa web search",
+    "query": "Ефремов уроженец с. Лукмос Сапожковского уезда Рязанской губернии",
+    "result": "not_found"
+   },
+   {
+    "source": "nashipredki.com (Lukmos page)",
+    "query": "Лукмос",
+    "result": "found",
+    "note": "village/parish data only; no indexed metrical records or surname list for Ефремов"
+   },
+   {
+    "source": "Exa web search",
+    "query": "Лукмос Покровская церковь метрические книги ГАРО",
+    "result": "not_found",
+    "note": "no online index of Lukmos metrical books found"
+   },
+   {
+    "source": "familysearch.org",
+    "query": "(site check)",
+    "result": "inaccessible"
+   },
+   {
+    "source": "familysearch.org",
+    "query": "(site check)",
+    "result": "inaccessible"
+   },
+   {
+    "source": "bessmertnybarak.ru",
+    "query": "(site check)",
+    "result": "inaccessible"
+   }
+  ],
+  "findings": [
+   {
+    "field": "other",
+    "proposed_value": "Lukmos (Лукмос) was a state-peasant (казённое) village of the Pokrovskaya church parish; listed in Сапожковский у. (2nd stan) in the 1859 place list, 185 households",
+    "match": "certain",
+    "source_url": "https://nashipredki.com/location/lukmos-selo-17997",
+    "evidence": "«2990 | Лукмос | село каз. | при рч. Лукмосе | Сапожковский уезд / 2 | ... 185 дворов, 483 м., 553 ж. Церковь православная 1»",
+    "conflicts_with_existing": "none – place-level context, not a record of this person"
+   },
+   {
+    "field": "other",
+    "proposed_value": "By the early 20th century Lukmos was the centre of Лукмосская волость in СПАССКИЙ уезд (not Сапожковский); a 1908 birth there is recorded as 'Рязанская губ., Спасский уезд ... с. Лукмос'. Pre-1917 church records for P101 (b.1902) and siblings should therefore also be sought among Спасский уезд church fonds in ГАРО",
+    "match": "probable",
+    "source_url": "https://info.rounb.ru/elbibl/BookMem/sp9.pdf",
+    "evidence": "«ЕРШОВ Александр Матвеевич. Родился 11 сентября 1908 г., Рязанская губ., Спасский уезд, (ныне Рязанская обл., Сапожковский р-н), с. Лукмос»; also ru.ruwiki.ru: «В XIX — начале XX века село являлось центром Лукмосской волости Спасского уезда Рязанской губернии»",
+    "conflicts_with_existing": "P101 birth_place says 'Сапожковский у.' – correct for 1859 but possibly Спасский у. by 1902; worth checking, not necessarily wrong"
+   }
+  ],
+  "proposed_confidence": "low",
+  "rationale": "No record of Никифор Ефремов found in online sources; the person-level sources for an ancestor born c.1840–1860 (Lukmos metrical books, 1858 revision) are not indexed online. Place context found: Lukmos was a state-peasant village, in Сапожковский у. in 1859 and Спасский у. by c.1906–1908."
+ },
+ {
+  "id": "P106",
+  "name": "Николай Ефремов",
+  "status": "nothing_found",
+  "sources_tried": [
+   {
+    "source": "WebSearch",
+    "query": "\"Ефремов Николай Павлович\" Рязанская Сапожковский OR Лукмос OR Ташкент",
+    "result": "not_found"
+   },
+   {
+    "source": "Exa web search",
+    "query": "Солдаты Победы Сапожковский район ЕФРЕМОВ Николай Павлович Лукмос",
+    "result": "not_found",
+    "note": "sp9.pdf (Солдаты Победы, Сапожковский р-н) only partially indexed; full name list could not be read"
+   },
+   {
+    "source": "memoryazan.ru – Книга памяти жертв полит. репрессий Рязанской обл., Сапожковский район (full alphabetic list, pages 1-11)",
+    "query": "browse letters Е and Ш",
+    "result": "not_found",
+    "note": "No Ефремов and no Широнин among Sapozhkovsky district repression victims; https://memoryazan.ru/citizens/area/25?page=3 and ?page=11"
+   },
+   {
+    "source": "ru.openlist.wiki (via Exa fetch)",
+    "query": "full-text search",
+    "result": "inaccessible",
+    "note": "Search page returns 'Соответствий не найдено' even for 'Широнин' and known entries; search appears non-functional through proxy, while direct article URLs work (verified on Ушаков Гурий Емельянович (1881))"
+   },
+   {
+    "source": "pamyat-naroda.ru",
+    "query": "Ефремов Георгий Павлович (and other Ефремов * Павлович)",
+    "result": "inaccessible",
+    "note": "EGRESS_BLOCKED by network proxy"
+   },
+   {
+    "source": "obd-memorial.ru",
+    "query": "(site check)",
+    "result": "inaccessible",
+    "note": "connection refused by proxy"
+   },
+   {
+    "source": "podvignaroda.ru",
+    "query": "(site check)",
+    "result": "inaccessible",
+    "note": "connection refused by proxy"
+   }
+  ],
+  "findings": [],
+  "proposed_confidence": "low",
+  "rationale": "No parents, dates or places in the tree, so the name alone is too common. He is also not listed among the children of P103 in family F30, so his place in the tree is unclear. Searched as Николай Павлович (assumed son of P103) without result; the main WWII databases were blocked."
+ },
+ {
+  "id": "P107",
+  "name": "Владимир Ефремов",
+  "status": "nothing_found",
+  "sources_tried": [
+   {
+    "source": "WebSearch",
+    "query": "\"Ефремов Владимир Павлович\" Ташкент OR Сапожковский OR Лукмос",
+    "result": "not_found",
+    "note": "Only hit: ru.openlist.wiki/Ефремов_Владимир_Павлович_(1893) – born с. Назаровское, Ачинский у., Енисейская губ., бухгалтер, arrested 1930. Rejected: different birthplace, not this person"
+   },
+   {
+    "source": "Exa web search",
+    "query": "Книга памяти Узбекистана Ефремов Владимир/Георгий/Николай Павлович Ташкент",
+    "result": "not_found"
+   },
+   {
+    "source": "forum.memory-book-uzb.com (Книга памяти Узбекистана, alphabetic lists)",
+    "query": "letter Е",
+    "result": "inaccessible",
+    "note": "HTTP 403 directly; topic for letter Е not located via Exa"
+   },
+   {
+    "source": "memoryazan.ru – Книга памяти жертв полит. репрессий Рязанской обл., Сапожковский район (full alphabetic list, pages 1-11)",
+    "query": "browse letters Е and Ш",
+    "result": "not_found",
+    "note": "No Ефремов and no Широнин among Sapozhkovsky district repression victims; https://memoryazan.ru/citizens/area/25?page=3 and ?page=11"
+   },
+   {
+    "source": "ru.openlist.wiki (via Exa fetch)",
+    "query": "full-text search",
+    "result": "inaccessible",
+    "note": "Search page returns 'Соответствий не найдено' even for 'Широнин' and known entries; search appears non-functional through proxy, while direct article URLs work (verified on Ушаков Гурий Емельянович (1881))"
+   },
+   {
+    "source": "pamyat-naroda.ru",
+    "query": "Ефремов Георгий Павлович (and other Ефремов * Павлович)",
+    "result": "inaccessible",
+    "note": "EGRESS_BLOCKED by network proxy"
+   },
+   {
+    "source": "obd-memorial.ru",
+    "query": "(site check)",
+    "result": "inaccessible",
+    "note": "connection refused by proxy"
+   },
+   {
+    "source": "podvignaroda.ru",
+    "query": "(site check)",
+    "result": "inaccessible",
+    "note": "connection refused by proxy"
+   }
+  ],
+  "findings": [],
+  "proposed_confidence": "low",
+  "rationale": "No matching record. From family context P107 was probably born c.1905–1915 and is a strong candidate for the WWII databases, but pamyat-naroda, obd-memorial and podvignaroda were all blocked. Searching those by 'Ефремов Владимир Павлович', with birth years 1903–1915 and Ташкент or Рязанская обл., is the top follow-up."
+ },
+ {
+  "id": "P108",
+  "name": "Георгий Ефремов",
+  "status": "nothing_found",
+  "sources_tried": [
+   {
+    "source": "WebSearch",
+    "query": "\"Ефремов Георгий Павлович\" Рязанская Сапожковский",
+    "result": "not_found"
+   },
+   {
+    "source": "pamyat-naroda.ru",
+    "query": "Ефремов Георгий Павлович",
+    "result": "inaccessible"
+   },
+   {
+    "source": "ru.openlist.wiki",
+    "query": "Ефремов Георгий Павлович",
+    "result": "inaccessible",
+    "note": "search non-functional (see P106)"
+   },
+   {
+    "source": "memoryazan.ru – Книга памяти жертв полит. репрессий Рязанской обл., Сапожковский район (full alphabetic list, pages 1-11)",
+    "query": "browse letters Е and Ш",
+    "result": "not_found",
+    "note": "No Ефремов and no Широнин among Sapozhkovsky district repression victims; https://memoryazan.ru/citizens/area/25?page=3 and ?page=11"
+   },
+   {
+    "source": "obd-memorial.ru",
+    "query": "(site check)",
+    "result": "inaccessible",
+    "note": "connection refused by proxy"
+   },
+   {
+    "source": "podvignaroda.ru",
+    "query": "(site check)",
+    "result": "inaccessible",
+    "note": "connection refused by proxy"
+   }
+  ],
+  "findings": [],
+  "proposed_confidence": "low",
+  "rationale": "No record found. The main WWII and repression databases were blocked, and 'Ефремов Георгий Павлович' should be searched there directly (also under the variant Егор Павлович)."
+ },
+ {
+  "id": "P122",
+  "name": "Нина Ушакова",
+  "status": "nothing_found",
+  "sources_tried": [
+   {
+    "source": "WebSearch",
+    "query": "\"Ушакова Нина Гурьевна\"",
+    "result": "not_found"
+   },
+   {
+    "source": "ru.openlist.wiki (direct article)",
+    "query": "Ушаков Гурий Емельянович (1881)",
+    "result": "found",
+    "note": "Father's record confirms the family lived at ст. Новосергиевская, Оренбургская обл. (счетовод; осужден 15.02.1938, ВМН; реабил. 09.09.1963): https://ru.openlist.wiki/Ушаков_Гурий_Емельянович_(1881). It contains nothing about Nina, but Новосергиевская/Оренбург is the search key for her"
+   },
+   {
+    "source": "pamyat-naroda.ru",
+    "query": "Ефремов Георгий Павлович (and other Ефремов * Павлович)",
+    "result": "inaccessible",
+    "note": "EGRESS_BLOCKED by network proxy"
+   },
+   {
+    "source": "obd-memorial.ru",
+    "query": "(site check)",
+    "result": "inaccessible",
+    "note": "connection refused by proxy"
+   }
+  ],
+  "findings": [],
+  "proposed_confidence": "low",
+  "rationale": "Nothing found for Nina Гурьевна Ушакова. The father's repression record (which matches the existing P120 data) puts the family in Новосергиевка, Оренбург region, so local Orenburg sources are the next step. Birth year unknown (probably c.1901–1925)."
+ },
+ {
+  "id": "P124",
+  "name": "Мартын Фомичев",
+  "status": "nothing_found",
+  "sources_tried": [
+   {
+    "source": "WebSearch",
+    "query": "\"Куваки\" Нижнеломовский Фомичев OR Фомичёв",
+    "result": "not_found",
+    "note": "Only results about the Кувака mineral spring"
+   },
+   {
+    "source": "WebSearch",
+    "query": "Фомичев Куваки Нижнеломовский уезд метрические книги ревизская сказка",
+    "result": "not_found",
+    "note": "no indexed revision-tale or metrical-book transcriptions for Куваки found online"
+   },
+   {
+    "source": "familysearch.org",
+    "query": "(site check)",
+    "result": "inaccessible"
+   }
+  ],
+  "findings": [],
+  "proposed_confidence": "low",
+  "rationale": "No online index covers Куваки revision lists or metrical books. Мартын would have been born c.1800–1830, so the 1834/1850/1858 ревизские сказки at ГАПО (Пенза) are the right source, but they are offline."
+ },
+ {
+  "id": "P130",
+  "name": "Андрей Широнин",
+  "status": "nothing_found",
+  "sources_tried": [
+   {
+    "source": "WebSearch",
+    "query": "\"Широнин\" Лукмос",
+    "result": "not_found",
+    "note": "only unrelated Широнин (Пётр Николаевич, Hero of the Soviet Union)"
+   },
+   {
+    "source": "WebSearch",
+    "query": "Широнин Спасский уезд OR Сапожковский уезд Рязанская губерния крестьянин",
+    "result": "not_found"
+   },
+   {
+    "source": "memoryazan.ru – Книга памяти жертв полит. репрессий Рязанской обл., Сапожковский район (full alphabetic list, pages 1-11)",
+    "query": "browse letters Е and Ш",
+    "result": "not_found",
+    "note": "No Ефремов and no Широнин among Sapozhkovsky district repression victims; https://memoryazan.ru/citizens/area/25?page=3 and ?page=11"
+   },
+   {
+    "source": "ru.openlist.wiki (via Exa fetch)",
+    "query": "full-text search",
+    "result": "inaccessible",
+    "note": "Search page returns 'Соответствий не найдено' even for 'Широнин' and known entries; search appears non-functional through proxy, while direct article URLs work (verified on Ушаков Гурий Емельянович (1881))"
+   }
+  ],
+  "findings": [],
+  "proposed_confidence": "low",
+  "rationale": "No external record. Internal inconsistency to flag: P104 is Екатерина ЕВФИМОВНА, so her father should be named Евфим, yet F36 makes Андрей (P130) her father and Евфим (P131) her grandfather (F36 itself is marked 'под вопросом'). Either F36 is wrong (Евфим P131 would be her father and Андрей a brother or uncle), or the patronymic is wrong. This needs checking against the memoir 'Екатерина Евфимовна'."
+ },
+ {
+  "id": "P131",
+  "name": "Евфим Широнин",
+  "status": "nothing_found",
+  "sources_tried": [
+   {
+    "source": "WebSearch",
+    "query": "\"Широнин\" Лукмос",
+    "result": "not_found"
+   },
+   {
+    "source": "WebSearch",
+    "query": "Широнин Спасский уезд OR Сапожковский уезд Рязанская губерния крестьянин",
+    "result": "not_found"
+   },
+   {
+    "source": "memoryazan.ru – Книга памяти жертв полит. репрессий Рязанской обл., Сапожковский район (full alphabetic list, pages 1-11)",
+    "query": "browse letters Е and Ш",
+    "result": "not_found",
+    "note": "No Ефремов and no Широнин among Sapozhkovsky district repression victims; https://memoryazan.ru/citizens/area/25?page=3 and ?page=11"
+   }
+  ],
+  "findings": [
+   {
+    "field": "other",
+    "proposed_value": "By the early 20th century Lukmos was the centre of Лукмосская волость in СПАССКИЙ уезд (not Сапожковский); a 1908 birth there is recorded as 'Рязанская губ., Спасский уезд ... с. Лукмос'. Pre-1917 church records for P101 (b.1902) and siblings should therefore also be sought among Спасский уезд church fonds in ГАРО",
+    "match": "probable",
+    "source_url": "https://info.rounb.ru/elbibl/BookMem/sp9.pdf",
+    "evidence": "«ЕРШОВ Александр Матвеевич. Родился 11 сентября 1908 г., Рязанская губ., Спасский уезд, (ныне Рязанская обл., Сапожковский р-н), с. Лукмос»; also ru.ruwiki.ru: «В XIX — начале XX века село являлось центром Лукмосской волости Спасского уезда Рязанской губернии»",
+    "conflicts_with_existing": "P101 birth_place says 'Сапожковский у.' – correct for 1859 but possibly Спасский у. by 1902; worth checking, not necessarily wrong"
+   }
+  ],
+  "proposed_confidence": "low",
+  "rationale": "No record found. Note the patronymic logic: P104 Екатерина Евфимовна implies Евфим is her FATHER, not her grandfather (see P130). Whether the Широнины were from Lukmos itself is unconfirmed."
+ },
+ {
+  "id": "P230",
+  "name": "Галина Исааковна Косых",
+  "status": "nothing_found",
+  "sources_tried": [
+   {
+    "source": "WebSearch",
+    "query": "\"Косых Галина Исааковна\" OR \"Ефремова Галина Исааковна\"",
+    "result": "not_found"
+   },
+   {
+    "source": "pamyat-naroda.ru",
+    "query": "Ефремов Георгий Павлович (and other Ефремов * Павлович)",
+    "result": "inaccessible",
+    "note": "EGRESS_BLOCKED by network proxy"
+   },
+   {
+    "source": "obd-memorial.ru",
+    "query": "(site check)",
+    "result": "inaccessible",
+    "note": "connection refused by proxy"
+   }
+  ],
+  "findings": [],
+  "proposed_confidence": "low",
+  "rationale": "No record found. She was probably born c.1910–1920. Dates are unknown, so she may be deceased but this is not confirmed. Only one generic search was made, and no living-person data was recorded."
+ },
+ {
+  "id": "P234",
+  "name": "Наталья Николаевна Артамонова",
+  "status": "nothing_found",
+  "sources_tried": [
+   {
+    "source": "memoryazan.ru Сапожковский р-н",
+    "query": "browse letter А",
+    "result": "not_found",
+    "note": "only АРТАМОНОВ ПАВЕЛ ВАСИЛЬЕВИЧ, which is unrelated"
+   }
+  ],
+  "findings": [],
+  "proposed_confidence": "low",
+  "rationale": "Nothing found. There are no dates or places to search with, and the name is common."
+ },
+ {
+  "id": "P235",
+  "name": "Наталья (Таля) Ефремова",
+  "status": "nothing_found",
+  "sources_tried": [
+   {
+    "source": "WebSearch",
+    "query": "\"Елецкая Наталья Павловна\" OR \"Елецкий Виктор\" Ефремова",
+    "result": "not_found",
+    "note": "only a modern writer Наталья Владимировна Елецкая (b.1977), not related"
+   }
+  ],
+  "findings": [],
+  "proposed_confidence": "low",
+  "rationale": "Nothing found under her married name Елецкая or her maiden name. A daughter of P103, probably born c.1900–1915."
+ },
+ {
+  "id": "P236",
+  "name": "Виктор Елецкий",
+  "status": "nothing_found",
+  "sources_tried": [
+   {
+    "source": "WebSearch",
+    "query": "\"Елецкий Виктор\" Ташкент",
+    "result": "not_found",
+    "note": "only Виктор Иванович Елецкий, a modern aviation author, with no link to this family"
+   },
+   {
+    "source": "pamyat-naroda.ru",
+    "query": "Ефремов Георгий Павлович (and other Ефремов * Павлович)",
+    "result": "inaccessible",
+    "note": "EGRESS_BLOCKED by network proxy"
+   },
+   {
+    "source": "obd-memorial.ru",
+    "query": "(site check)",
+    "result": "inaccessible",
+    "note": "connection refused by proxy"
+   }
+  ],
+  "findings": [],
+  "proposed_confidence": "low",
+  "rationale": "No matching record. A WWII search for 'Елецкий Виктор' on pamyat-naroda/obd-memorial is recommended once those sites are reachable."
+ },
+ {
+  "id": "P237",
+  "name": "Мария Ефремова",
+  "status": "nothing_found",
+  "sources_tried": [
+   {
+    "source": "none (not separately searched)",
+    "query": "Ефремова Мария Павловна",
+    "result": "not_found",
+    "note": "Not run as a separate query: the name is too common and there are no keys. Covered only indirectly by the Lukmos/Ефремов searches and the memoryazan Сапожковский list (no Ефремов/Ефремова)"
+   },
+   {
+    "source": "pamyat-naroda.ru",
+    "query": "Ефремов Георгий Павлович (and other Ефремов * Павлович)",
+    "result": "inaccessible",
+    "note": "EGRESS_BLOCKED by network proxy"
+   }
+  ],
+  "findings": [],
+  "proposed_confidence": "low",
+  "rationale": "There are no dates, spouse or place beyond her parents, and 'Мария Павловна Ефремова' is too common to identify without more keys."
+ }
+]

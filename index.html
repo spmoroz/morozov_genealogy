@@ -1,0 +1,2196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Родословная Морозовых</title>
+<style>
+:root{color-scheme:light;--bg:#f4f1ea;--card:#fff;--ink:#2b2b2b;--mut:#7a7468;--line:#cfc6b3;--accent:#7a5c3e;--hi:#2e7d32;--med:#b58900;--lo:#b34;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:var(--accent);color:#fdf8ef;padding:14px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{font-size:18px;margin:0;font-weight:600}
+header .stat{font-size:12px;opacity:.85}
+#search{margin-left:auto;padding:7px 12px;border:none;border-radius:6px;min-width:220px;font-size:14px}
+.wrap{display:grid;grid-template-columns:300px 1fr;gap:0;height:calc(100vh - 52px)}
+#list{overflow:auto;border-right:1px solid var(--line);background:#efe9dc}
+.lineGrp{padding:6px 12px;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--mut);position:sticky;top:0;background:#e7e0cf}
+.pitem{padding:7px 14px;cursor:pointer;font-size:14px;border-bottom:1px solid #e3dccb}
+.pitem:hover{background:#e3dccb}
+.pitem .yr{color:var(--mut);font-size:12px}
+#main{overflow:auto;padding:22px 26px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;max-width:760px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.card h2{margin:0 0 2px;font-size:24px}
+.maiden{color:var(--mut);font-weight:400;font-size:16px}
+.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;color:#fff;vertical-align:middle;margin-left:8px}
+.b-high{background:var(--hi)}.b-medium{background:var(--med)}.b-low{background:var(--lo)}
+.meta{margin:14px 0;display:grid;grid-template-columns:130px 1fr;gap:6px 14px;font-size:14px}
+.meta .k{color:var(--mut)}
+.rel{margin-top:18px}
+.rel h3{font-size:12px;text-transform:uppercase;color:var(--mut);margin:14px 0 6px;letter-spacing:.5px}
+.chip{display:inline-block;background:#efe9dc;border:1px solid var(--line);border-radius:16px;padding:5px 12px;margin:3px 5px 3px 0;cursor:pointer;font-size:13px}
+.chip:hover{background:#e0d8c4}
+.chip.spouse{background:#f3e7d8;border-color:#d8c2a3}
+.note{margin-top:16px;padding:12px 14px;background:#faf6ee;border-left:3px solid var(--accent);font-size:13px;color:#4a443a;border-radius:4px}
+.ped{margin-top:8px;font-size:13px}
+.ped ul{list-style:none;margin:0;padding-left:18px;border-left:1px dashed var(--line)}
+.ped li{margin:4px 0}
+.ped .pl{cursor:pointer;color:var(--accent)}
+.ped .pl:hover{text-decoration:underline}
+.editbtn{margin-top:18px;background:var(--accent);color:#fff;border:none;border-radius:6px;padding:9px 16px;cursor:pointer;font-size:14px}
+.editbtn:hover{opacity:.9}
+#editbox{display:none;margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px;max-width:760px}
+#editbox textarea{width:100%;min-height:90px;font-size:14px;padding:8px;border:1px solid var(--line);border-radius:6px;font-family:inherit}
+#editbox input{width:100%;padding:7px;border:1px solid var(--line);border-radius:6px;margin-bottom:8px;font-size:14px}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.sub{background:var(--hi);color:#fff;border:none;border-radius:6px;padding:8px 14px;cursor:pointer}
+.copy{background:#555;color:#fff;border:none;border-radius:6px;padding:8px 14px;cursor:pointer}
+.legend{font-size:12px;color:var(--mut);margin-top:10px}
+
+.backbtn{display:none;margin-bottom:10px;background:#efe9dc;border:1px solid var(--line);border-radius:6px;padding:9px 14px;cursor:pointer;font-size:14px}
+@media (max-width:760px){
+  .wrap{grid-template-columns:1fr;height:auto;min-height:calc(100vh - 60px)}
+  #list{border-right:none;border-bottom:1px solid var(--line);max-height:none;-webkit-overflow-scrolling:touch}
+  #main{padding:14px 16px}
+  header{padding:10px 14px}
+  header h1{font-size:16px}
+  #search{margin-left:0;width:100%;min-width:0;font-size:16px}
+  body.detail #list{display:none}
+  body:not(.detail) #main{display:none}
+  .backbtn{display:inline-block}
+  .pitem{padding:13px 14px;font-size:16px}
+  .lineGrp{font-size:12px}
+  .chip{padding:9px 14px;font-size:14px;margin:4px 6px 4px 0}
+  .card{padding:14px;border:none;box-shadow:none;max-width:100%}
+  .card h2{font-size:21px}
+  .meta{grid-template-columns:100px 1fr;gap:6px 10px}
+  .editbtn,.sub,.copy{padding:11px 16px;font-size:15px}
+  #editbox input,#editbox textarea{font-size:16px}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>🌳 Родословная Морозовых</h1><span class="stat">· публичная версия (данные живущих родственников скрыты)</span>
+  <span class="stat" id="stat"></span>
+  <input id="search" placeholder="Поиск по имени…" autocomplete="off">
+</header>
+<div class="wrap">
+  <div id="list"></div>
+  <div id="main"></div>
+</div>
+<script>
+const DATA = {
+ "persons": [
+  {
+   "id": "P001",
+   "name": "Сергей Морозов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1979",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Корневая персона (пробанд)",
+   "source": "Древо Морозов4",
+   "confidence": "high"
+  },
+  {
+   "id": "P002",
+   "name": "Александр М.",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "high",
+   "living": true
+  },
+  {
+   "id": "P003",
+   "name": "Юрий М.",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "medium",
+   "living": true
+  },
+  {
+   "id": "P004",
+   "name": "Анна К.",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "high",
+   "living": true
+  },
+  {
+   "id": "P005",
+   "name": "Живой родственник",
+   "maiden_name": "",
+   "sex": "",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Данные о несовершеннолетнем скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P010",
+   "name": "Павел М.",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "high",
+   "living": true
+  },
+  {
+   "id": "P011",
+   "name": "Елена М.",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "high",
+   "living": true
+  },
+  {
+   "id": "P012",
+   "name": "Ольга М.",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P013",
+   "name": "Вера М.",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P020",
+   "name": "Николай Морозов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1927-05-01",
+   "death_date": "1994",
+   "birth_place": "с. Вольная Лашма Ковылкинский р-н Морд. АССР",
+   "death_place": "Москва",
+   "line": "Морозов",
+   "notes": "Дед; *01.05.1927",
+   "source": "отцовская линия",
+   "confidence": "high"
+  },
+  {
+   "id": "P021",
+   "name": "Тамара Костина",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1933-06-21",
+   "death_date": "1996",
+   "birth_place": "с. Кочелаево, Ковылкинский р-н, Морд. АССР",
+   "death_place": "Москва",
+   "line": "Костин",
+   "notes": "Бабушка; брак 15.11.1952 в Кочелаево",
+   "source": "отцовская линия",
+   "confidence": "high"
+  },
+  {
+   "id": "P030",
+   "name": "Константин Морозов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1892-05-20",
+   "death_date": "1934",
+   "birth_place": "с. Керамсурка Ардатовский у. Симбирская губ.",
+   "death_place": "с. Большой Азясь",
+   "line": "Морозов",
+   "notes": "Окончил семинарию; директор школы Б. Азяся. Отец — Иван Максимович (по дереву); мать не установлена",
+   "source": "отцовская линия",
+   "confidence": "high"
+  },
+  {
+   "id": "P031",
+   "name": "Анна Миронова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1903-07-16",
+   "death_date": "1980-03",
+   "birth_place": "с. Малая/Вольная Лашма, Паньженская вол., Наровчатский у.",
+   "death_place": "с. Троицк",
+   "line": "Миронов",
+   "notes": "Брак в Троицке 11.02.1922",
+   "source": "отцовская линия",
+   "confidence": "high"
+  },
+  {
+   "id": "P032",
+   "name": "Василий Морозов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1912-06-29",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Сын Константина от более раннего союза; мать не установлена (не подтверждено)",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P033",
+   "name": "Сергей Морозов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1914-09-11",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Сын Константина от более раннего союза; мать не установлена (не подтверждено)",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P034",
+   "name": "Иван Морозов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1919",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Сын Константина от более раннего союза; мать не установлена (не подтверждено)",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P040",
+   "name": "Иван Максимович Морозов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1868-08-18",
+   "death_date": "",
+   "birth_place": "Керамсурка",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Крестьянин Керамсурки; брак Керамсурка 22.10.1910",
+   "source": "отцовская линия",
+   "confidence": "high"
+  },
+  {
+   "id": "P041",
+   "name": "Ольга Филипповна Прикащикова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1891",
+   "death_date": "",
+   "birth_place": "с. Сосуновка",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Жена И.М. Морозова; крестьянка",
+   "source": "отцовская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P042",
+   "name": "Мария Морозова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1911-06-15",
+   "death_date": "",
+   "birth_place": "с. Керамсурка Атяшевский р-н Ардатовский у.",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Работала в школе с. Троицк; незамужняя",
+   "source": "отцовская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P050",
+   "name": "Максим Захарович",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "до 1912",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Крестьянин Керамсурки",
+   "source": "отцовская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P051",
+   "name": "Наталья Александровна",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1839",
+   "death_date": "1912-01-24",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Жена Максима",
+   "source": "отцовская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P052",
+   "name": "Захар",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Крестьянин Керамсурки (глубокий предок)",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P053",
+   "name": "Акилина Трофимова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P060",
+   "name": "Николай Фёдорович Миронов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1881",
+   "death_date": "",
+   "birth_place": "Малая Лашма",
+   "death_place": "",
+   "line": "Миронов",
+   "notes": "Казённый крестьянин М. Лашмы; брак 12.06.1891",
+   "source": "отцовская линия",
+   "confidence": "high"
+  },
+  {
+   "id": "P061",
+   "name": "Евдокия Васильевна",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1870",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Жена Н.Ф. Миронова",
+   "source": "отцовская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P062",
+   "name": "Фёдор Миронов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1858",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Миронов",
+   "notes": "Год рождения ориентировочно 1858–1863",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P063",
+   "name": "Михаил Иванович Миронов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1819",
+   "death_date": "",
+   "birth_place": "дворовый села Воскресенская Лашма",
+   "death_place": "",
+   "line": "Миронов",
+   "notes": "Глубокий предок",
+   "source": "отцовская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P064",
+   "name": "Ольга Миронова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1847",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Миронов",
+   "notes": "",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P065",
+   "name": "Василий Миронов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1852",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Миронов",
+   "notes": "",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P070",
+   "name": "Степан Иванович Чуваков",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "с. Малая Лашма, Наровчатский у.",
+   "death_place": "",
+   "line": "Чуваков",
+   "notes": "Казённый крестьянин",
+   "source": "отцовская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P071",
+   "name": "Акилина Чувакова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1879",
+   "death_date": "",
+   "birth_place": "с. Малая Лашма, Наровчатский у.",
+   "death_place": "",
+   "line": "Чуваков",
+   "notes": "Брак 17.01.1899 в Вольной Лашме",
+   "source": "отцовская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P080",
+   "name": "Василий Алексеевич Костин/Антонов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1900-03-04",
+   "death_date": "1973",
+   "birth_place": "с. Кочелаево, Кочелаевская вол., Наровчатский у. Пензенская губ.",
+   "death_place": "пос. Красный Яр Ковылкинский р-н",
+   "line": "Костин",
+   "notes": "Сменил фамилию Антонов→Костин. Участник трёх войн (все награды сгорели на пожаре). Учился на командных курсах — по семейному преданию, вместе с Будённым или Ворошиловым (не уточнено). Один из руководителей колхоза; вышел из КПСС в 1960-е. На похороны в пос. Красный Яр приезжала делегация правительства Мордовии. [со слов Павла Николаевича Морозова]",
+   "source": "отцовская линия + Павел Николаевич Морозов",
+   "confidence": "high"
+  },
+  {
+   "id": "P081",
+   "name": "Гликерия (Лукерья) Петровна Прохорова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1899-10-21",
+   "death_date": "1991",
+   "birth_place": "с. Кочелаево",
+   "death_place": "Москва",
+   "line": "Прохоров",
+   "notes": "Брак 1922 в Кочелаево. Муж в ссорах называл её «черногоркой» (прозвище). [со слов Павла Николаевича Морозова]",
+   "source": "отцовская линия + Павел Николаевич Морозов",
+   "confidence": "high"
+  },
+  {
+   "id": "P082",
+   "name": "Алексей Иванович Костин/Антонов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1877",
+   "death_date": "",
+   "birth_place": "с. Кочелаево",
+   "death_place": "",
+   "line": "Костин",
+   "notes": "Государственный крестьянин",
+   "source": "отцовская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P083",
+   "name": "Анастасия Ивановна Головина",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1878",
+   "death_date": "",
+   "birth_place": "с. Кочелаево",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Гос. крестьянка; брак 23.10.1895",
+   "source": "отцовская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P084",
+   "name": "Иван Николаевич Костин",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1841",
+   "death_date": "",
+   "birth_place": "с. Кочелаево",
+   "death_place": "",
+   "line": "Костин",
+   "notes": "Государственный крестьянин",
+   "source": "отцовская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P085",
+   "name": "Николай Иванович Костин",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1820",
+   "death_date": "",
+   "birth_place": "с. Кочелаево",
+   "death_place": "",
+   "line": "Костин",
+   "notes": "Государственный крестьянин (глубокий предок)",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P086",
+   "name": "Иван Костин",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1863",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Костин",
+   "notes": "Брат",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P087",
+   "name": "Михаил Костин",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1880",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Костин",
+   "notes": "Брат",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P088",
+   "name": "Фёдор Костин",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Костин",
+   "notes": "Запасной унтер-офицер",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P090",
+   "name": "Пётр Ильич Прохоров",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "с. Кочелаево",
+   "death_place": "",
+   "line": "Прохоров",
+   "notes": "Крестьянин Кочелаево",
+   "source": "отцовская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P091",
+   "name": "Иван Прохоров",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "с. Кочелаево",
+   "death_place": "",
+   "line": "Прохоров",
+   "notes": "Крестьянин Кочелаево",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P092",
+   "name": "Илья Иванов Прохоров",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "с. Кочелаево",
+   "death_place": "",
+   "line": "Прохоров",
+   "notes": "Крестьянин Кочелаево",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P093",
+   "name": "Евдокия Стефановна",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Жена в линии Прохоровых",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P094",
+   "name": "Виктор К.",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Костин",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P095",
+   "name": "Николай К.",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Костин",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P100",
+   "name": "Евгений Иванович Ефремов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1933-02-16",
+   "death_date": "2024",
+   "birth_place": "Ленинград",
+   "death_place": "",
+   "line": "Ефремов",
+   "notes": "Автор мемуара \"Наши предки\"",
+   "source": "Дедушка.pdf",
+   "confidence": "high"
+  },
+  {
+   "id": "P101",
+   "name": "Иван Павлович Ефремов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1902",
+   "death_date": "",
+   "birth_place": "с. Лукмос, Сапожковский у., Рязанская губ.",
+   "death_place": "",
+   "line": "Ефремов",
+   "notes": "Техник-эксплуатации; диспетчер Ташкентской ж.д. 1921–1957; ВКП(б); брак 07.12.1928 Ново-Сергиевская",
+   "source": "Дедушка.pdf",
+   "confidence": "high"
+  },
+  {
+   "id": "P102",
+   "name": "Александра Гурьевна Ушакова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1905-11-01",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Ушаков",
+   "notes": "Жена Ивана Ефремова; свид. о рожд.; брак 07.12.1928",
+   "source": "Дедушка.pdf",
+   "confidence": "high"
+  },
+  {
+   "id": "P103",
+   "name": "Павел Никифорович Ефремов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "с. Лукмос",
+   "death_place": "",
+   "line": "Ефремов",
+   "notes": "Крестьянин с. Лукмос",
+   "source": "Дедушка.pdf",
+   "confidence": "medium"
+  },
+  {
+   "id": "P104",
+   "name": "Екатерина Евфимовна Ефремова",
+   "maiden_name": "Широнина",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Широнин",
+   "notes": "Бабушка Е.И.; жена Павла Никифоровича; см. мемуар \"Екатерина Евфимовна\"",
+   "source": "Дедушка.pdf",
+   "confidence": "high"
+  },
+  {
+   "id": "P105",
+   "name": "Никифор Ефремов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Ефремов",
+   "notes": "Глубокий предок",
+   "source": "Древо Морозов",
+   "confidence": "low"
+  },
+  {
+   "id": "P106",
+   "name": "Николай Ефремов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Ефремов",
+   "notes": "",
+   "source": "Древо Морозов",
+   "confidence": "low"
+  },
+  {
+   "id": "P107",
+   "name": "Владимир Ефремов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Ефремов",
+   "notes": "",
+   "source": "Древо Морозов4",
+   "confidence": "low"
+  },
+  {
+   "id": "P108",
+   "name": "Георгий Ефремов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Ефремов",
+   "notes": "",
+   "source": "Древо Морозов4",
+   "confidence": "low"
+  },
+  {
+   "id": "P109",
+   "name": "Юлия Е.",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Ефремов",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "high",
+   "living": true
+  },
+  {
+   "id": "P110",
+   "name": "Татьяна М.",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Ефремов",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "high",
+   "living": true
+  },
+  {
+   "id": "P120",
+   "name": "Гурий Емельянович Ушаков",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1881",
+   "death_date": "1938-02-15",
+   "birth_place": "с. Ростовки",
+   "death_place": "",
+   "line": "Ушаков",
+   "notes": "Счетовод ст. Ново-Сергиевская; арест 07.03.1937; расстрелян тройкой УНКВД Оренб.обл.; реабил. 09.09.1963 (Книга памяти с.327)",
+   "source": "Дедушка.pdf",
+   "confidence": "high"
+  },
+  {
+   "id": "P121",
+   "name": "Мария Фокеевна Фомичёва",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1881-05-20",
+   "death_date": "",
+   "birth_place": "с. Куваки, Нижнеломовский у.",
+   "death_place": "",
+   "line": "Фомичев",
+   "notes": "Крестьянская девица; крещена 21.05.1881; жена Гурия Ушакова; брак 27.10.1900 церковь с. Каменка",
+   "source": "Дедушка.pdf",
+   "confidence": "high"
+  },
+  {
+   "id": "P122",
+   "name": "Нина Ушакова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Ушаков",
+   "notes": "",
+   "source": "Древо Морозов4",
+   "confidence": "low"
+  },
+  {
+   "id": "P123",
+   "name": "Фока Мартынов Фомичёв",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Фомичев",
+   "notes": "Крестьянин с. Куваки; отец Марии Фокеевны",
+   "source": "Дедушка.pdf",
+   "confidence": "medium"
+  },
+  {
+   "id": "P124",
+   "name": "Мартын Фомичев",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Фомичев",
+   "notes": "Глубокий предок",
+   "source": "Древо Морозов",
+   "confidence": "low"
+  },
+  {
+   "id": "P125",
+   "name": "Елена Илларионовна",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Жена Фоки Мартынова Фомичёва; мать Марии Фокеевны",
+   "source": "Дедушка.pdf",
+   "confidence": "medium"
+  },
+  {
+   "id": "P130",
+   "name": "Андрей Широнин",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Широнин",
+   "notes": "",
+   "source": "Древо Морозов4",
+   "confidence": "low"
+  },
+  {
+   "id": "P131",
+   "name": "Евфим Широнин",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Широнин",
+   "notes": "Глубокий предок",
+   "source": "Древо Морозов",
+   "confidence": "low"
+  },
+  {
+   "id": "P140",
+   "name": "Константин Балковский",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1874-12-24",
+   "death_date": "",
+   "birth_place": "Виленская губ., Вилейский у., Куренецкая вол., д. Сухари/Путьковичи",
+   "death_place": "",
+   "line": "Балковский",
+   "notes": "Крестьянин/счётовод ф-ки «Красный маяк»; Выборгская наб. 35",
+   "source": "материнская линия",
+   "confidence": "high"
+  },
+  {
+   "id": "P141",
+   "name": "Евдокия Рогова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1881-03-07",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Рогов",
+   "notes": "Домохозяйка; жена К. Балковского",
+   "source": "материнская линия",
+   "confidence": "high"
+  },
+  {
+   "id": "P142",
+   "name": "Климент (Климент) Балковский",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "Виленская губ.",
+   "death_place": "",
+   "line": "Балковский",
+   "notes": "Отец Константина",
+   "source": "Семья Балковских",
+   "confidence": "medium"
+  },
+  {
+   "id": "P143",
+   "name": "Владимир Балковский",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1906-03-18",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Балковский",
+   "notes": "Сборщик аппаратов на заводе «Эриксон»",
+   "source": "материнская линия",
+   "confidence": "high"
+  },
+  {
+   "id": "P144",
+   "name": "Елена Балковская",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1907-05-25",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Балковский",
+   "notes": "Ученица фабрики «Светоч»; эвакуирована из блокады",
+   "source": "материнская линия",
+   "confidence": "high"
+  },
+  {
+   "id": "P145",
+   "name": "Сергей Балковский",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1909-12-28",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Балковский",
+   "notes": "Ученик фабрики «Красный Маяк»",
+   "source": "материнская линия",
+   "confidence": "high"
+  },
+  {
+   "id": "P146",
+   "name": "Константин Балковский",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1912-01-12",
+   "death_date": "1942-01-09",
+   "birth_place": "",
+   "death_place": "под Шлиссельбургом",
+   "line": "Балковский",
+   "notes": "Старшина; пал в бою; дочь Валентина",
+   "source": "материнская линия",
+   "confidence": "high"
+  },
+  {
+   "id": "P147",
+   "name": "Анна Балковская",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1932-11-22",
+   "death_date": "2026",
+   "birth_place": "Ленинград",
+   "death_place": "",
+   "line": "Балковский",
+   "notes": "Технический переводчик; в замужестве Ефремова (мать Юлии и Татьяны); ум. 2026 — подтверждено Сергеем",
+   "source": "материнская линия",
+   "confidence": "high"
+  },
+  {
+   "id": "P148",
+   "name": "Валентина",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Балковский",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P150",
+   "name": "Мария Степановна Рогова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1858-01-04",
+   "death_date": "1935-12-31",
+   "birth_place": "Гдов",
+   "death_place": "Ленинград",
+   "line": "Рогов",
+   "notes": "Мать Евдокии; безграмотная",
+   "source": "материнская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P151",
+   "name": "Василий Рогов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "до 1928",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Рогов",
+   "notes": "",
+   "source": "материнская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P160",
+   "name": "Анна Ивановна Михайлова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1875",
+   "death_date": "1942",
+   "birth_place": "",
+   "death_place": "Ленинград (блокада)",
+   "line": "Михайлов",
+   "notes": "Неграмотная; работница ф-ки «Красная Нить»; *1875/1876 (расхождение)",
+   "source": "материнская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P161",
+   "name": "Василий Михайлов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Михайлов",
+   "notes": "Рабочий; пропал в Гражданскую войну",
+   "source": "материнская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P162",
+   "name": "Надежда Михайлова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1911-09-30",
+   "death_date": "1994",
+   "birth_place": "д. Биберево, Псковская губ.",
+   "death_place": "",
+   "line": "Михайлов",
+   "notes": "Брак 19.12.1930–2.1.1935",
+   "source": "материнская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P170",
+   "name": "Николай Иеронович Глод-Сачук",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1905",
+   "death_date": "1942",
+   "birth_place": "",
+   "death_place": "Ленинград (блокада)",
+   "line": "Глод-Сачук",
+   "notes": "Аптекарский пер. 4, кв. 20",
+   "source": "материнская линия",
+   "confidence": "medium"
+  },
+  {
+   "id": "P171",
+   "name": "Александра Глод-Сачук",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1906",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Глод-Сачук",
+   "notes": "",
+   "source": "материнская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P172",
+   "name": "Виктор Глод-Сачук",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Глод-Сачук",
+   "notes": "Умер в блокаду",
+   "source": "материнская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P200",
+   "name": "Пелагея Архиповна",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1816",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Костин",
+   "notes": "Жена Николая Ивановича Костина",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P201",
+   "name": "Стефан Костин/Антонов",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "1898-07-29",
+   "death_date": "",
+   "birth_place": "с. Кочелаево",
+   "death_place": "",
+   "line": "Костин",
+   "notes": "Сын Алексея и Анастасии",
+   "source": "отцовская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P210",
+   "name": "Наталья П.",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P006",
+   "name": "Ольга М.",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "high",
+   "living": true
+  },
+  {
+   "id": "P007",
+   "name": "Живой родственник",
+   "maiden_name": "",
+   "sex": "",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Данные о несовершеннолетнем скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P008",
+   "name": "Живой родственник",
+   "maiden_name": "",
+   "sex": "",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Данные о несовершеннолетнем скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P009",
+   "name": "Дана Б.",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "high",
+   "living": true
+  },
+  {
+   "id": "P014",
+   "name": "Живой родственник",
+   "maiden_name": "",
+   "sex": "",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Морозов",
+   "notes": "Данные о несовершеннолетнем скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P015",
+   "name": "Мелисса П.",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "high",
+   "living": true
+  },
+  {
+   "id": "P016",
+   "name": "Марина",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "medium",
+   "living": true
+  },
+  {
+   "id": "P017",
+   "name": "Александр П.",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "medium",
+   "living": true
+  },
+  {
+   "id": "P018",
+   "name": "Николай П.",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P019",
+   "name": "Игорь Д.",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "medium",
+   "living": true
+  },
+  {
+   "id": "P220",
+   "name": "Ника Д.",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "medium",
+   "living": true
+  },
+  {
+   "id": "P221",
+   "name": "Алексей Я.",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P222",
+   "name": "Роман Я.",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P230",
+   "name": "Галина Исааковна Косых",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Жена Владимира Ефремова",
+   "source": "материнская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P231",
+   "name": "Наталья Е.",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Ефремов",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P232",
+   "name": "Олег Е.",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Ефремов",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P233",
+   "name": "Ольга Е.",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Ефремов",
+   "notes": "Живущий человек: личные данные скрыты",
+   "source": "",
+   "confidence": "low",
+   "living": true
+  },
+  {
+   "id": "P234",
+   "name": "Наталья Николаевна Артамонова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Жена Георгия Ефремова",
+   "source": "материнская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P235",
+   "name": "Наталья (Таля) Ефремова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Ефремов",
+   "notes": "Дочь Павла Никифоровича Ефремова и Екатерины Широниной; замужем за Виктором Елецким",
+   "source": "материнская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P236",
+   "name": "Виктор Елецкий",
+   "maiden_name": "",
+   "sex": "M",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Муж Натальи (Тали) Ефремовой",
+   "source": "материнская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P237",
+   "name": "Мария Ефремова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "Ефремов",
+   "notes": "Дочь Павла Никифоровича Ефремова и Екатерины Широниной",
+   "source": "материнская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P238",
+   "name": "Анна Петрова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Бездетная, уехала в Москву (материнская линия, Михайловы); место не установлено",
+   "source": "материнская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P239",
+   "name": "Ксения Скородумова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1899",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Бездетная (материнская линия, Михайловы); место не установлено",
+   "source": "материнская линия",
+   "confidence": "low"
+  },
+  {
+   "id": "P240",
+   "name": "Варвара Ивановна Смирнова",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Жена Константина Балковского (1912–1942)",
+   "source": "Древо Морозов",
+   "confidence": "low"
+  },
+  {
+   "id": "P241",
+   "name": "Марина Степановна",
+   "maiden_name": "",
+   "sex": "F",
+   "birth_date": "1819",
+   "death_date": "",
+   "birth_place": "",
+   "death_place": "",
+   "line": "боковая",
+   "notes": "Глубокий предок (линия Мироновых/Чуваковых); место не установлено",
+   "source": "отцовская линия",
+   "confidence": "low"
+  }
+ ],
+ "families": [
+  {
+   "fam_id": "F01",
+   "husband_id": "P050",
+   "wife_id": "P051",
+   "children_ids": "P040",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "medium",
+   "notes": "Максим Захарович × Наталья Александровна → Иван Максимович"
+  },
+  {
+   "fam_id": "F02",
+   "husband_id": "P040",
+   "wife_id": "P041",
+   "children_ids": "P042",
+   "marriage_date": "1910-10-22",
+   "marriage_place": "Керамсурка",
+   "confidence": "medium",
+   "notes": "Иван Максимович × Ольга Прикащикова → Мария (*1911)"
+  },
+  {
+   "fam_id": "F03",
+   "husband_id": "P030",
+   "wife_id": "P031",
+   "children_ids": "P020",
+   "marriage_date": "1922-02-11",
+   "marriage_place": "Троицк",
+   "confidence": "high",
+   "notes": "Константин Морозов × Анна Миронова → Николай (1927)"
+  },
+  {
+   "fam_id": "F04",
+   "husband_id": "P020",
+   "wife_id": "P021",
+   "children_ids": "P010;P011",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "fam_id": "F05",
+   "husband_id": "P010",
+   "wife_id": "P110",
+   "children_ids": "P001;P002",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "fam_id": "F06",
+   "husband_id": "P001",
+   "wife_id": "P006",
+   "children_ids": "P007;P008",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "fam_id": "F07",
+   "husband_id": "P002",
+   "wife_id": "P016",
+   "children_ids": "P005",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "fam_id": "F10",
+   "husband_id": "P085",
+   "wife_id": "P200",
+   "children_ids": "P084",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Николай Иванович Костин × Пелагея Архиповна → Иван Николаевич"
+  },
+  {
+   "fam_id": "F11",
+   "husband_id": "P084",
+   "wife_id": "",
+   "children_ids": "P082",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Иван Николаевич Костин → Алексей Иванович"
+  },
+  {
+   "fam_id": "F12",
+   "husband_id": "P082",
+   "wife_id": "P083",
+   "children_ids": "P080;P201",
+   "marriage_date": "1895-10-23",
+   "marriage_place": "Кочелаево",
+   "confidence": "medium",
+   "notes": "Алексей Иванович Костин/Антонов × Анастасия Головина"
+  },
+  {
+   "fam_id": "F13",
+   "husband_id": "P080",
+   "wife_id": "P081",
+   "children_ids": "P021",
+   "marriage_date": "1922",
+   "marriage_place": "Кочелаево",
+   "confidence": "high",
+   "notes": "Василий Алексеевич Костин × Гликерия Прохорова → Тамара Костина"
+  },
+  {
+   "fam_id": "F14",
+   "husband_id": "P091",
+   "wife_id": "",
+   "children_ids": "P092",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Иван Прохоров → Илья Иванов Прохоров"
+  },
+  {
+   "fam_id": "F15",
+   "husband_id": "P092",
+   "wife_id": "",
+   "children_ids": "P090",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Илья Иванов Прохоров → Пётр Ильич Прохоров"
+  },
+  {
+   "fam_id": "F16",
+   "husband_id": "P090",
+   "wife_id": "",
+   "children_ids": "P081",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Пётр Ильич Прохоров → Гликерия Петровна"
+  },
+  {
+   "fam_id": "F20",
+   "husband_id": "P063",
+   "wife_id": "",
+   "children_ids": "P062",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Михаил Иванович Миронов → Фёдор Миронов"
+  },
+  {
+   "fam_id": "F21",
+   "husband_id": "P062",
+   "wife_id": "",
+   "children_ids": "P060",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Фёдор Миронов → Николай Фёдорович Миронов"
+  },
+  {
+   "fam_id": "F22",
+   "husband_id": "P060",
+   "wife_id": "P061",
+   "children_ids": "P031",
+   "marriage_date": "1891-06-12",
+   "marriage_place": "",
+   "confidence": "medium",
+   "notes": "Николай Фёдорович Миронов × Евдокия Васильевна → Анна Миронова"
+  },
+  {
+   "fam_id": "F23",
+   "husband_id": "P070",
+   "wife_id": "",
+   "children_ids": "P071",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Степан Иванович Чуваков → Акилина Чувакова"
+  },
+  {
+   "fam_id": "F30",
+   "husband_id": "P103",
+   "wife_id": "P104",
+   "children_ids": "P101;P107;P108;P235;P237",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "high",
+   "notes": "Павел Никифорович Ефремов × Екатерина Широнина → Иван, Владимир, Георгий, Наталья(Таля), Мария"
+  },
+  {
+   "fam_id": "F31",
+   "husband_id": "P101",
+   "wife_id": "P102",
+   "children_ids": "P100",
+   "marriage_date": "1928-12-07",
+   "marriage_place": "Ново-Сергиевская",
+   "confidence": "high",
+   "notes": "Иван Павлович Ефремов × Александра Гурьевна Ушакова → Евгений"
+  },
+  {
+   "fam_id": "F32",
+   "husband_id": "P120",
+   "wife_id": "P121",
+   "children_ids": "P102;P122",
+   "marriage_date": "1900-10-27",
+   "marriage_place": "с. Каменка",
+   "confidence": "high",
+   "notes": "Гурий Ушаков × Мария Фомичёва"
+  },
+  {
+   "fam_id": "F33",
+   "husband_id": "P123",
+   "wife_id": "P125",
+   "children_ids": "P121",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "medium",
+   "notes": "Фока Мартынов Фомичёв × Елена Илларионовна → Мария Фокеевна"
+  },
+  {
+   "fam_id": "F34",
+   "husband_id": "P105",
+   "wife_id": "",
+   "children_ids": "P103",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Никифор Ефремов → Павел Никифорович"
+  },
+  {
+   "fam_id": "F35",
+   "husband_id": "P131",
+   "wife_id": "",
+   "children_ids": "P130",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Евфим Широнин → Андрей Широнин"
+  },
+  {
+   "fam_id": "F36",
+   "husband_id": "P130",
+   "wife_id": "",
+   "children_ids": "P104",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Андрей Широнин → Екатерина Широнина (под вопросом)"
+  },
+  {
+   "fam_id": "F40",
+   "husband_id": "P142",
+   "wife_id": "",
+   "children_ids": "P140",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "medium",
+   "notes": "Климент Балковский → Константин Балковский"
+  },
+  {
+   "fam_id": "F41",
+   "husband_id": "P140",
+   "wife_id": "P141",
+   "children_ids": "P143;P144;P145;P146",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "high",
+   "notes": "Константин Балковский × Евдокия Рогова → 4 детей"
+  },
+  {
+   "fam_id": "F42",
+   "husband_id": "P151",
+   "wife_id": "P150",
+   "children_ids": "P141",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "medium",
+   "notes": "Василий Рогов × Мария Степановна → Евдокия Рогова"
+  },
+  {
+   "fam_id": "F43",
+   "husband_id": "P145",
+   "wife_id": "",
+   "children_ids": "P147",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "medium",
+   "notes": "Сергей Балковский → Анна Балковская"
+  },
+  {
+   "fam_id": "F44",
+   "husband_id": "P146",
+   "wife_id": "P240",
+   "children_ids": "P148",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": ""
+  },
+  {
+   "fam_id": "F45",
+   "husband_id": "P161",
+   "wife_id": "P160",
+   "children_ids": "P162",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Василий Михайлов × Анна Ивановна → Надежда Михайлова"
+  },
+  {
+   "fam_id": "F50",
+   "husband_id": "P170",
+   "wife_id": "P171",
+   "children_ids": "P172",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Николай Иеронович Глод-Сачук × Александра → Виктор"
+  },
+  {
+   "fam_id": "F08",
+   "husband_id": "P003",
+   "wife_id": "P009",
+   "children_ids": "P014",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "fam_id": "F09",
+   "husband_id": "P001",
+   "wife_id": "P004",
+   "children_ids": "P003",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "fam_id": "F0A",
+   "husband_id": "",
+   "wife_id": "P006",
+   "children_ids": "P015",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "fam_id": "F60",
+   "husband_id": "P100",
+   "wife_id": "P147",
+   "children_ids": "P109;P110",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "high",
+   "notes": ""
+  },
+  {
+   "fam_id": "F61",
+   "husband_id": "P017",
+   "wife_id": "P011",
+   "children_ids": "P210;P018",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "fam_id": "F62",
+   "husband_id": "P019",
+   "wife_id": "P109",
+   "children_ids": "P220",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "medium",
+   "notes": ""
+  },
+  {
+   "fam_id": "F63",
+   "husband_id": "P221",
+   "wife_id": "P220",
+   "children_ids": "P222",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": ""
+  },
+  {
+   "fam_id": "F2A",
+   "husband_id": "P040",
+   "wife_id": "",
+   "children_ids": "P030",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "medium",
+   "notes": "Иван Максимович Морозов — отец Константина; мать не установлена"
+  },
+  {
+   "fam_id": "F3A",
+   "husband_id": "P030",
+   "wife_id": "",
+   "children_ids": "P032;P033;P034",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Дети Константина от более раннего союза (Василий, Сергей, Иван); мать не установлена — не подтверждено"
+  },
+  {
+   "fam_id": "F64",
+   "husband_id": "P107",
+   "wife_id": "P230",
+   "children_ids": "P231;P232;P233",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": ""
+  },
+  {
+   "fam_id": "F65",
+   "husband_id": "P108",
+   "wife_id": "P234",
+   "children_ids": "",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Георгий Ефремов × Наталья Николаевна Артамонова"
+  },
+  {
+   "fam_id": "F66",
+   "husband_id": "P236",
+   "wife_id": "P235",
+   "children_ids": "",
+   "marriage_date": "",
+   "marriage_place": "",
+   "confidence": "low",
+   "notes": "Виктор Елецкий × Наталья (Таля) Ефремова"
+  }
+ ]
+};
+const P = {}; DATA.persons.forEach(p=>P[p.id]=p);
+const F = DATA.families;
+const fams_as_child={}, fams_as_spouse={};
+F.forEach(f=>{
+  [f.husband_id,f.wife_id].forEach(s=>{if(s){(fams_as_spouse[s]=fams_as_spouse[s]||[]).push(f);}});
+  (f.children_ids||"").split(";").map(x=>x.trim()).filter(Boolean).forEach(c=>{(fams_as_child[c]=fams_as_child[c]||[]).push(f);});
+});
+const childrenOf=fid=>(F.find(f=>f.fam_id===fid).children_ids||"").split(";").map(x=>x.trim()).filter(Boolean);
+function years(p){const b=(p.birth_date||"").slice(0,4),d=(p.death_date||"").slice(0,4);if(!b&&!d)return"";return"("+(b||"?")+(d?"–"+d:"")+")";}
+function fullName(p){return p.name+(p.maiden_name?" ("+p.maiden_name+")":"");}
+
+document.getElementById('stat').textContent = DATA.persons.length+" персон · "+F.length+" семей · 8 линий";
+
+function renderList(filter=""){
+  const byLine={};
+  DATA.persons.filter(p=>fullName(p).toLowerCase().includes(filter.toLowerCase()))
+    .forEach(p=>{(byLine[p.line]=byLine[p.line]||[]).push(p);});
+  const order=["Морозов","Костин","Прохоров","Миронов","Чуваков","Ефремов","Ушаков","Фомичев","Широнин","Балковский","Рогов","Михайлов","Глод-Сачук","боковая"];
+  const keys=Object.keys(byLine).sort((a,b)=>(order.indexOf(a)+99*(order.indexOf(a)<0))-(order.indexOf(b)+99*(order.indexOf(b)<0)));
+  let h="";
+  keys.forEach(k=>{
+    h+=`<div class="lineGrp">${k}</div>`;
+    byLine[k].sort((a,b)=>(a.birth_date||"9").localeCompare(b.birth_date||"9")).forEach(p=>{
+      h+=`<div class="pitem" onclick="show('${p.id}')">${p.name} <span class="yr">${years(p)}</span></div>`;
+    });
+  });
+  document.getElementById('list').innerHTML=h;
+}
+
+function pedigree(id,depth){
+  if(depth<=0||!fams_as_child[id])return"";
+  const f=fams_as_child[id][0];
+  let h="<ul>";
+  [f.husband_id,f.wife_id].forEach(par=>{ if(par){const p=P[par];
+    h+=`<li><span class="pl" onclick="show('${par}')">${p.name}</span> <span class="yr">${years(p)}</span>${pedigree(par,depth-1)}</li>`;}});
+  return h+"</ul>";
+}
+
+function show(id){
+  const p=P[id];
+  const cb={high:"Документально",medium:"Вероятно",low:"Предположительно"}[p.confidence]||p.confidence;
+  let h=`<div class="card"><button class="backbtn" onclick="backToList()">‹ К списку</button><h2>${p.name} ${p.maiden_name?'<span class="maiden">('+p.maiden_name+')</span>':''}<span class="badge b-${p.confidence}">${cb}</span></h2>`;
+  h+=`<div class="meta">`;
+  const add=(k,v)=>{if(v)h+=`<div class="k">${k}</div><div>${v}</div>`;};
+  add("Пол",{M:"мужской",F:"женский"}[p.sex]||"");
+  add("Рождение",[p.birth_date,p.birth_place].filter(Boolean).join(", "));
+  add("Смерть",[p.death_date,p.death_place].filter(Boolean).join(", "));
+  add("Линия",p.line);
+  add("Источник",p.source);
+  h+=`</div>`;
+  // relations
+  const parents=(fams_as_child[id]||[]).flatMap(f=>[f.husband_id,f.wife_id]).filter(Boolean);
+  const spouses=(fams_as_spouse[id]||[]).map(f=>f.husband_id===id?f.wife_id:f.husband_id).filter(Boolean);
+  const kids=(fams_as_spouse[id]||[]).flatMap(f=>childrenOf(f.fam_id));
+  const sibs=(fams_as_child[id]||[]).flatMap(f=>childrenOf(f.fam_id)).filter(x=>x!==id);
+  const chips=(arr,cls="")=>arr.map(x=>`<span class="chip ${cls}" onclick="show('${x}')">${P[x].name} <span class="yr">${years(P[x])}</span></span>`).join("")||'<span style="color:#999">—</span>';
+  h+=`<div class="rel">`;
+  h+=`<h3>Родители</h3>${chips(parents)}`;
+  h+=`<h3>Супруг(а)</h3>${chips(spouses,"spouse")}`;
+  h+=`<h3>Дети</h3>${chips(kids)}`;
+  h+=`<h3>Братья / сёстры</h3>${chips(sibs)}`;
+  h+=`</div>`;
+  if(p.notes)h+=`<div class="note">${p.notes}</div>`;
+  if(fams_as_child[id]){h+=`<div class="rel"><h3>Предки</h3><div class="ped">${pedigree(id,4)}</div></div>`;}
+  h+=`<button class="editbtn" onclick="toggleEdit('${id}')">✏️ Предложить правку / комментарий</button>`;
+  h+=`<div id="editbox">
+        <div class="legend" style="margin-bottom:8px">Дополнить или поправить информацию об этом человеке. Ответ сохранится в базе Сергея (Google-таблица).</div>
+        <div class="row">
+          <button class="sub" onclick="openForm('${id}')">Открыть форму для этого человека</button>
+          <button class="copy" onclick="copyLabel('${id}')">Скопировать метку</button>
+        </div>
+        <div class="legend" id="ed_status">При открытии метка («Кого касается» и ID) копируется в буфер — вставьте в первое поле формы.</div>
+      </div>`;
+  h+=`</div>`;
+  document.getElementById('main').innerHTML=h;
+  document.getElementById('main').scrollTop=0;
+  document.body.classList.add('detail');
+  window.scrollTo(0,0);
+}
+const GFORM="https://docs.google.com/forms/d/e/1FAIpQLScBpwS54dVNIzf_WCZ0nbQvW4zxYxzinALYMrhlsXkDvDAi9g/viewform";
+function backToList(){document.body.classList.remove('detail');window.scrollTo(0,0);}
+function toggleEdit(){const e=document.getElementById('editbox');e.style.display=e.style.display==='block'?'none':'block';}
+function label(id){const p=P[id];return fullName(p)+" ["+id+"]";}
+function copyLabel(id){navigator.clipboard.writeText(label(id)).then(()=>{document.getElementById('ed_status').textContent="Скопировано: «"+label(id)+"». Вставьте в поле «Кого касается».";});}
+function openForm(id){
+  const p=P[id];
+  navigator.clipboard.writeText(label(id)).catch(()=>{});
+  window.open(GFORM,"_blank");
+  document.getElementById('ed_status').innerHTML="Форма открыта в новой вкладке. В поле <b>«Кого касается»</b> вставьте из буфера (⌘/Ctrl+V): «"+fullName(p)+"». В поле <b>«ID записи»</b> впишите: <b>"+id+"</b>. Затем ваше имя и текст.";
+}
+
+document.getElementById('search').addEventListener('input',e=>renderList(e.target.value));
+renderList();
+show('P001');
+document.body.classList.remove('detail');
+</script>
+</body>
+</html>
